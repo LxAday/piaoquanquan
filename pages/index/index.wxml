@@ -1,0 +1,5 @@
+<view class="top">
+    <view class="iconfont icon-sousuo"></view>
+    <input class="search" type="text"/>
+    <view class="iconfont icon-zuji"></view>
+</view>

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#666",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/menus/主页.png",
+        "selectedIconPath": "/images/menus/主页s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "9.9包邮",
+        "iconPath": "/images/menus/9.9.png",
+        "selectedIconPath": "/images/menus/9.9s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分类",
+        "iconPath": "/images/menus/分类.png",
+        "selectedIconPath": "/images/menus/分类s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "收藏",
+        "iconPath": "/images/menus/收藏.png",
+        "selectedIconPath": "/images/menus/收藏s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "/images/menus/我的.png",
+        "selectedIconPath": "/images/menus/我的s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

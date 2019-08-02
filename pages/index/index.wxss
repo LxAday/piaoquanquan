@@ -1,0 +1,12 @@
+.top {
+    width: 750rpm;
+    height: 90rpx;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+  
+}
