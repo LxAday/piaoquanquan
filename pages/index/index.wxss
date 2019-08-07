@@ -3,10 +3,82 @@
     height: 90rpx;
     background: red;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
+.search-box {
+    background: #fff;
+    width: 650rpx;
+    height: 60rpx;
+    border-radius: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rpx;
+}
+
+.sousuo-ico {
+    font-size: 40rpx;
+    margin-left: -20rpx;
+}
+
 .search {
-  
+    width: 550rpx;
+    height: 50rpx;
+    margin-left: 10rpx;
+}
+
+.zuji-ico {
+    font-size: 45rpx;
+    margin-right: 20rpx;
+    transform: rotate(25deg) translateY(-5rpx);
+    color: white;
+}
+
+.top1 {
+    background: white;
+    width: 750rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx;
+    border-bottom: 1rpx solid#ccc;
+}
+
+.top1 view {
+    padding: 10rpx;
+}
+
+.column {
+    width: 530rpx;
+    height: 40rpx;
+}
+
+.column view {
+    padding: 15rpx;
+    display: inline;
+}
+
+.ai-arrow-down {
+    margin-right: 20rpx;
+    color: #ccc;
+}
+
+.top1 .choiceness {
+    position: relative;
+    color: red;
+    border-bottom: 5rpx red solid;
+}
+
+.top1 .choiceness:before {
+    content: '';
+    display: block;
+    right: -13rpx;
+    top: 10rpx;
+    width: 2rpx;
+    height: 50rpx;
+    background: #ccc;
+    position: absolute;
 }
