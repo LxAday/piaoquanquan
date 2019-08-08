@@ -1,3 +1,4 @@
+/*顶部搜索*/
 .top {
     width: 750rpm;
     height: 90rpx;
@@ -36,6 +37,7 @@
     color: white;
 }
 
+/*顶部导航*/
 .top1 {
     background: white;
     width: 750rpx;
@@ -81,4 +83,198 @@
     height: 50rpx;
     background: #ccc;
     position: absolute;
+}
+
+/*轮播图*/
+.carousel {
+    width: 750rpx;
+    height: 350rpx;
+    background: #000;
+}
+
+.carousel swiper {
+    width: 750rpx;
+    height: 100%;
+}
+
+.carousel image {
+    width: 750rpx;
+    height: 100%;
+}
+
+/*分类*/
+.classification {
+    width: 750rpx;
+    height: 200rpx;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.classification image {
+    width: 120rpx;
+    height: 120rpx;
+}
+
+.classification > view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 130rpx;
+    height: 100%;
+}
+
+/*推送*/
+.push {
+    width: 750rpx;
+    height: 700rpx;
+    background: url("https://img.alicdn.com/imgextra/i1/2053469401/O1CN01Mrwm8l2JJhxstUglC_!!2053469401.png");
+    background-size: 100% 100%;
+}
+
+.push .push-top {
+    width: 750rpx;
+    height: 190rpx;
+}
+
+.push .push-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15rpx;
+}
+
+.push .push-body navigator {
+    width: 360rpx;
+    height: 160rpx;
+}
+
+/*大家都在领*/
+.draw {
+    width: 750rpx;
+    height: 500rpx;
+    display: flex;
+    background: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.draw .draw-top {
+    padding: 20rpx;
+    background: white;
+    width: 750rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.draw .draw-top .draw-top1 {
+    border-left: 8rpx solid red;
+    padding-left: 10rpx;
+}
+
+.draw .draw-top .draw-top-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.draw .draw-top .draw-top-2 .draw-top-21 {
+    color: red;
+    font-size: 34rpx;
+
+}
+
+.draw .draw-top .draw-top-2 .draw-top-22 {
+    color: #ccc;
+    font-size: 26rpx;
+    margin-right: 40rpx;
+    margin-left: 20rpx;
+}
+
+.draw .draw-button {
+    width: 750rpx;
+    height: 360rpx;
+    padding: 10rpx;
+    display: flex;
+}
+
+.draw-button .draw-button-box {
+    width: 280rpx;
+    height: 350rpx;
+    background: white;
+    border-top-right-radius: 15rpx;
+    border-top-left-radius: 15rpx;
+    box-shadow: 0 0 5rpx#888888;
+    padding: 10rpx;
+    display: inline-block;
+    margin: 5rpx 20rpx auto 5rpx;
+}
+
+.draw-button-box .draw-button-img image {
+    width: 100%;
+    height: 250rpx;
+}
+
+.draw-button-box .draw-button-ab {
+    display: flex;
+    justify-content: space-around;
+    height: 40rpx;
+    background: #FD72C7;
+    font-size: 24rpx;
+    color: white;
+    align-items: center;
+    margin-top: -50rpx;
+    position: relative;
+    border-radius: 10rpx;
+}
+
+.draw-button-box .draw-button-ab .draw-button-ab-last {
+    position: relative;
+}
+
+.draw-button-box .draw-button-ab .draw-button-ab-last:before {
+    position: absolute;
+    content: '';
+    width: 1rpx;
+    height: 24rpx;
+    background: #fff;
+    left: -10rpx;
+    top: 5rpx;
+}
+
+.draw-button-box .draw-button-title {
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+.draw-button-box .draw-button-price {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 60rpx;
+}
+
+.draw-button-box .draw-button-price > view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.draw-button-box .draw-button-price > view:first-child {
+    color: red;
+}
+
+.draw-button-box .draw-button-price > view:last-child {
+    text-decoration: line-through;
+    color: #ccc;
+    margin-left: 10rpx;
+}
+
+.draw-button-box .draw-button-price > view:first-child > view:first-child {
+    font-size: 24rpx;
 }

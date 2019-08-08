@@ -1,3 +1,4 @@
+<!--顶部搜索-->
 <view class="top">
     <view class="search-box">
         <view class="iconfont icon-sousuo sousuo-ico"></view>
@@ -5,6 +6,7 @@
     </view>
     <view class="iconfont icon-zuji zuji-ico"></view>
 </view>
+        <!--顶部导航-->
 <view class="top1">
     <view class="choiceness">精选</view>
     <view class="column">
@@ -21,8 +23,210 @@
             <view>美食</view>
             <view>美食</view>
         </scroll-view>
-
     </view>
     <view class="iconfont icon-ai-arrow-down ai-arrow-down"></view>
 </view>
+        <!--轮播图-->
+<view class="carousel">
+    <swiper indicator-active-color="#FC3F78" indicator-dots="true" circular="true" autoplay="true">
+        <swiper-item>
+            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01GrZZGu2JJhxkJo8Xq_!!2053469401.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="https://img.alicdn.com/imgextra/i3/2053469401/O1CN01LL445N2JJhxpsD0p6_!!2053469401.jpg"></image>
+        </swiper-item>
+    </swiper>
+</view>
+        <!--分类-->
+<view class="classification">
+    <view>
+        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
+        <view>9.9包邮</view>
+    </view>
+    <view>
+        <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01yJcLA22JJhxsrHHRT_!!2053469401.png"></image>
+        <view>9.9包邮</view>
+    </view>
+    <view>
+        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
+        <view>9.9包邮</view>
+    </view>
+    <view>
+        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
+        <view>9.9包邮</view>
+    </view>
+</view>
+        <!--推送-->
+<view class="push">
+    <navigator class="push-top" url=""></navigator>
+    <view class="push-body">
+        <navigator url=""></navigator>
+        <navigator url=""></navigator>
+        <navigator url=""></navigator>
+        <navigator url=""></navigator>
+        <navigator url=""></navigator>
+        <navigator url=""></navigator>
+    </view>
+</view>
+        <!--大家都在领-->
+<view class="draw">
+    <view class="draw-top">
+        <view class="draw-top1">
+            大家都在领
+        </view>
+        <view class="draw-top-2">
+            <view class="draw-top-21">545454</view>
+            <view class="draw-top-22">次实时领券</view>
+        </view>
+    </view>
+    <view class="draw-button">
+
+        <scroll-view scroll-x="true"
+                     style="height:380rpx;text-align:left;white-space: nowrap; display: flex">
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+            <view class="draw-button-box">
+                <view class="draw-button-img">
+                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
+                </view>
+                <view class="draw-button-ab">
+                    <view>3.8万人已领</view>
+                    <view class="draw-button-ab-last">100元券</view>
+                </view>
+                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
+                <view class="draw-button-price">
+                    <view>
+                        <view>￥</view>
+                        <view>158</view>
+                    </view>
+                    <view>
+                        <view>￥</view>
+                        <view>165</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+
+
+    </view>
+</view>
+
 
