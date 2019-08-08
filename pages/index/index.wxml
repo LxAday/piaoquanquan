@@ -11,7 +11,7 @@
     <view class="choiceness">精选</view>
     <view class="column">
         <scroll-view scroll-x="true"
-                     style="height:40rpx;text-align:left;white-space: nowrap; display: flex">
+                     style="height:40rpx;text-align:left;white-space: nowrap;">
             <view>美食</view>
             <view>美食</view>
             <view>美食</view>
@@ -82,7 +82,7 @@
     <view class="draw-button">
 
         <scroll-view scroll-x="true"
-                     style="height:380rpx;text-align:left;white-space: nowrap; display: flex">
+                     style="height:380rpx;text-align:left;white-space: nowrap;">
             <view class="draw-button-box">
                 <view class="draw-button-img">
                     <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
@@ -228,5 +228,59 @@
 
     </view>
 </view>
+
+        <!--返回顶部-->
+<view bindtap="goTop" class="iconfont icon-ai-arrow-down down" style="display:{{scrollTopOn}}"></view>
+        <!--领券直播-->
+<view class="draw draw2">
+    <view class="draw-top">
+        <view class="draw-top1">
+            领券直播
+        </view>
+        <view class="draw-top-2">
+            <view class="draw-top-20">今日已为用户省</view>
+            <view class="draw-top-21">545454</view>
+            <view class="draw-top-22">元</view>
+        </view>
+    </view>
+</view>
+        <!--商品-->
+<view class="coupon">
+    <view class="coupon-commodity">
+        <image class="commodity"
+               src="https://img.alicdn.com/imgextra/i4/880734502/O1CN01wMxvLm1j7xbVUIyOR_!!880734502.jpg_310x310.jpg_.webp"></image>
+    </view>
+    <view class="describe">
+        <view class="title">
+            <view class="iconfont icon-tianmaoT"></view>
+            <view>【买一送一】自然旋律海盐皂除螨皂</view>
+        </view>
+        <view class="price">
+            <view class="price1">
+                <view>天猫价</view>
+                <view>￥24.9</view>
+            </view>
+            <view class="price1">
+                <view>已售</view>
+                <view class="stress">18.5万</view>
+                <view>件</view>
+            </view>
+        </view>
+        <view class="coupon1">
+            <view class="coupon-discount1">
+                <view>券后价￥</view>
+                <view class="stress">21.9</view>
+            </view>
+
+            <view class="coupon-discount">
+                <view>3</view>
+                <view>元券</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
 
 

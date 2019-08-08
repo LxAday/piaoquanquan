@@ -191,7 +191,7 @@
     color: #ccc;
     font-size: 26rpx;
     margin-right: 40rpx;
-    margin-left: 20rpx;
+    margin-left: 10rpx;
 }
 
 .draw .draw-button {
@@ -277,4 +277,117 @@
 
 .draw-button-box .draw-button-price > view:first-child > view:first-child {
     font-size: 24rpx;
+}
+
+/*领券直播*/
+.draw-top-2 .draw-top-20 {
+    font-size: 26rpx;
+    margin-right: 10rpx;
+}
+
+.draw2 {
+    background: yellow;
+    height: 84rpx;
+}
+
+.coupon {
+    background: white;
+    border-bottom: 1rpx solid#ccc;
+    width: 750rpx;
+    height: 250rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15rpx;
+}
+
+.coupon .coupon-commodity {
+    width: 252rpx;
+    height: 252rpx;
+}
+
+.coupon .describe {
+    width: 430rpx;
+    height: 252rpx;
+    margin-right: 30rpx;
+}
+
+.coupon .commodity {
+    width: 252rpx;
+    height: 252rpx;
+    border-radius: 10rpx;
+}
+
+.describe .title {
+    width: 100%;
+    height: 126rpx;
+}
+
+.describe .title view {
+    display: inline;
+    width: 100%;
+}
+
+.describe .title view:first-child {
+    color: red;
+}
+
+.describe .price {
+    display: flex;
+    width: 100%;
+    height: 50rpx;
+    /*line-height: 50rpx;*/
+    margin-top: 20rpx;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.describe .price .price1 {
+    display: flex;
+    color: #ccc;
+    font-size: 24rpx;
+}
+
+.price .price1 .stress {
+    color: red;
+}
+
+.describe .coupon1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FC3F78;
+    font-size: 30rpx;
+}
+
+.coupon1 .coupon-discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rpx solid red;
+    padding: 5rpx 30rpx;
+}
+
+.coupon1 .coupon-discount1 {
+    display: flex;
+}
+
+.coupon-discount1 .stress {
+    font-size: 36rpx;
+    margin-top: -5rpx;
+}
+
+/*返回顶部*/
+.down {
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background: #5C5C5C;
+    color: whitesmoke;
+    text-align: center;
+    position: fixed;
+    right: 20rpx;
+    bottom: 20rpx;
 }
