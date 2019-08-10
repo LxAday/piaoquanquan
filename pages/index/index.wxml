@@ -228,7 +228,6 @@
 
     </view>
 </view>
-
         <!--返回顶部-->
 <view bindtap="goTop" class="iconfont icon-ai-arrow-down down" style="display:{{scrollTopOn}}"></view>
         <!--领券直播-->
@@ -245,40 +244,42 @@
     </view>
 </view>
         <!--商品-->
-<view class="coupon">
-    <view class="coupon-commodity">
-        <image class="commodity"
-               src="https://img.alicdn.com/imgextra/i4/880734502/O1CN01wMxvLm1j7xbVUIyOR_!!880734502.jpg_310x310.jpg_.webp"></image>
-    </view>
-    <view class="describe">
-        <view class="title">
-            <view class="iconfont icon-tianmaoT"></view>
-            <view>【买一送一】自然旋律海盐皂除螨皂</view>
+<block wx:for="{{list}}" wx:for-item="item" wx:key="pro">
+    <view class="coupon" bindtap="favorable" data-id="{{item.id}}">
+        <view class="coupon-commodity">
+            <image class="commodity"
+                   src="{{item.mainPic}}"></image>
         </view>
-        <view class="price">
-            <view class="price1">
-                <view>天猫价</view>
-                <view>￥24.9</view>
+        <view class="describe">
+            <view class="title">
+                <view class="iconfont icon-tianmaoT"></view>
+                <view>{{item.title}}</view>
             </view>
-            <view class="price1">
-                <view>已售</view>
-                <view class="stress">18.5万</view>
-                <view>件</view>
+            <view class="price">
+                <view class="price1">
+                    <view>天猫价</view>
+                    <view>￥{{item.originalPrice}}</view>
+                </view>
+                <view class="price1">
+                    <view>已售</view>
+                    <view class="stress">{{item.dailySales}}</view>
+                    <view>件</view>
+                </view>
             </view>
-        </view>
-        <view class="coupon1">
-            <view class="coupon-discount1">
-                <view>券后价￥</view>
-                <view class="stress">21.9</view>
-            </view>
+            <view class="coupon1">
+                <view class="coupon-discount1">
+                    <view>券后价￥</view>
+                    <view class="stress">{{item.actualPrice}}</view>
+                </view>
 
-            <view class="coupon-discount">
-                <view>3</view>
-                <view>元券</view>
+                <view class="coupon-discount">
+                    <view>{{item.couponPrice}}</view>
+                    <view>元券</view>
+                </view>
             </view>
         </view>
     </view>
-</view>
+</block>
 
 
 
