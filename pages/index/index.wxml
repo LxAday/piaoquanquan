@@ -244,7 +244,7 @@
     </view>
 </view>
         <!--商品-->
-<block wx:for="{{list}}" wx:for-item="item" wx:key="pro">
+<block wx:for="{{list}}" wx:for-item="item" wx:key="">
     <view class="coupon" bindtap="favorable" data-id="{{item.id}}">
         <view class="coupon-commodity">
             <image class="commodity"

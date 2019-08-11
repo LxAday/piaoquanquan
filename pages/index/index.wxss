@@ -89,15 +89,9 @@
 .carousel {
     width: 750rpx;
     height: 350rpx;
-    background: #000;
 }
 
-.carousel swiper {
-    width: 750rpx;
-    height: 100%;
-}
-
-.carousel image {
+.carousel swiper, .carousel image {
     width: 750rpx;
     height: 100%;
 }

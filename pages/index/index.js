@@ -56,8 +56,7 @@ Page({
     },
     favorable({currentTarget}) {
         wx.navigateTo({
-            url: '/ps/index/dads',
-            events: currentTarget.dataset
+            url: '/pages/details/index?id=' + currentTarget.dataset.id
         });
         console.log();
     }
