@@ -1,0 +1,4 @@
+var filter = function (event,symbol) {
+    return event.split(symbol)
+}
+module.exports.filter = filter
