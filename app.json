@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/details/index"
   ],
   "window": {
     "backgroundColor": "#666",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "券票票123",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
