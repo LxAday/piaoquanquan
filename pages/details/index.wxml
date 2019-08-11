@@ -1,0 +1,79 @@
+<!--pages/details/index.wxml-->
+
+<!--引入公共函数库-->
+<wxs module="m1" src="../../filter.wxs"></wxs>
+<view class="carousel">
+    <swiper indicator-active-color="#FC3F78" indicator-dots="true" circular="true" autoplay="true">
+        <block wx:for="{{list}}" wx:for-item="item" wx:key="">
+            <swiper-item>
+                <image src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+        <!--标志-->
+<view class="sign">
+    <view class="sign-img">
+        <image src="https://img.alicdn.com/imgextra/i1/2053469401/TB2umeoFb1YBuNjSszhXXcUsFXa-2053469401.png"></image>
+    </view>
+    <view class="sign-title">
+        <view>近</view>
+        <view>24</view>
+        <view>小时，</view>
+        <view>2335</view>
+        <view>人已抢</view>
+    </view>
+</view>
+        <!--标题-->
+<view class="title">
+    <view class="title-box title1">
+        <view>天猫</view>
+        <view class="title1-title">{{commodity.dtitle}}</view>
+    </view>
+    <view class="title-box title2">
+        <view class="title2-box">
+            <view>券后价￥</view>
+            <view class="jg">{{commodity.actualPrice}}</view>
+        </view>
+        <view class="title2-box">
+            <view>已售</view>
+            <view class="num">{{commodity.dailySales}}</view>
+            <view>件</view>
+        </view>
+    </view>
+    <view class="title-box tianmao">
+        <view class="tianmao-box">
+            <view>天猫价￥</view>
+            <view>{{commodity.originalPrice}}</view>
+        </view>
+        <view class="tianmao-box">
+            <view class="tianmao-box1 no1">
+                <view class="iconfont icon-zhengque1">
+                </view>
+                <view>包邮</view>
+            </view>
+            <view class="tianmao-box1">
+                <view class="iconfont icon-zhengque1">
+                </view>
+                <view>运费险</view>
+            </view>
+        </view>
+    </view>
+    <view class="title-box coupon">
+        <view class="coupon1">
+            <view class="coupon11">
+                <view>{{commodity.couponPrice}}</view>
+                <view>元券</view>
+            </view>
+            <view class="coupon11 coupon111">
+                <view>使用期限:</view>
+                <view>{{m1.filter(commodity.couponStartTime,' ')[0]}}-{{m1.filter(commodity.couponEndTime,' ')[0]}}
+                </view>
+            </view>
+        </view>
+        <view class="coupon2">立即领券</view>
+    </view>
+    <view class="introduce title-box">
+        fdasfsdgsaggdsaaaaaaaaaaaaaaaaaaaaaaaaaaaa反反复复付付付付付付付付付付付付付付付付付付付付付付
+    </view>
+</view>

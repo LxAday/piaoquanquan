@@ -1,0 +1,192 @@
+/* pages/details/index.wxss */
+/*顶部轮播图*/
+.carousel {
+    width: 750rpx;
+    height: 600rpx;
+}
+
+.carousel swiper, .carousel image {
+    width: 750rpx;
+    height: 100%;
+}
+
+/*标志*/
+.sign {
+    display: flex;
+    width: 750rpx;
+    height: 100rpx;
+    justify-content: left;
+}
+
+.sign > .sign-img image {
+    width: 180rpx;
+    height: 100%;
+    margin-left: 20rpx;
+}
+
+.sign > .sign-title {
+    width: 550rpx;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20rpx;
+}
+
+.sign > .sign-title > view {
+    font-size: 26rpx;
+    color: #bbb;
+}
+
+/*标题*/
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
+}
+
+.title > .title-box {
+    width: 750rpx;
+    background-color: white;
+}
+
+.title > .title1 {
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 80rpx;
+    overflow: hidden;
+}
+
+.title1 .title1-title {
+    font-weight: normal;
+}
+
+.title > .title1 > view:first-child {
+    font-size: 24rpx;
+    border: 1rpx solid red;
+    padding: 0 10rpx;
+    color: red;
+}
+
+.title > .title1 > view:last-child {
+    margin-left: 10rpx;
+}
+
+.title > .title2 {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 50rpx;
+    font-size: 24rpx;
+}
+
+.title > .title2 > .title2-box {
+    display: flex;
+    align-items: center;
+}
+
+.title > .title2 > .title2-box:first-child {
+    color: red;
+}
+
+.title2 .jg {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.title2-box .num {
+    color: red;
+}
+
+.title .tianmao {
+    background-color: white;
+    display: flex;
+    height: 40rpx;
+    font-size: 26rpx;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tianmao .tianmao-box {
+    display: flex;
+    align-items: center;
+}
+
+.tianmao .tianmao-box .tianmao-box1 {
+    display: flex;
+    align-items: center;
+}
+
+.tianmao-box > .no1 {
+    margin-right: 20rpx;
+}
+
+.tianmao-box1 > .iconfont {
+    color: red;
+    margin-right: 5rpx;
+    font-size: 24rpx;
+}
+
+.title .coupon {
+    height: 120rpx;
+    border-radius: 20rpx;
+    border: 1rpx solid red;
+    margin: 20rpx auto;
+    box-shadow: 0 2rpx 10rpx#ccc;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
+    background-color: #FA9C66;
+}
+
+.coupon > .coupon1 {
+    width: 450rpx;
+    height: 100%;
+    border-right: 5rpx dashed#fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coupon .coupon11 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: white;
+}
+
+.coupon .coupon11:first-child view:first-child {
+    font-size: 44rpx;
+}
+
+.coupon .coupon111 {
+    height: 50%;
+    font-size: 24rpx;
+    color: #eee;
+}
+
+.coupon .coupon2 {
+    text-align: center;
+    height: 100%;
+    width: 220rpx;
+    line-height: 110rpx;
+    font-size: 34rpx;
+    font-weight: bold;
+    color: white;
+}
+
+.title .introduce {
+    height: 200rpx;
+    color: #8897BA;
+    font-size: 28rpx;
+    overflow: hidden;
+}
