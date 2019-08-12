@@ -10,7 +10,8 @@ Page({
         list: [],
         num: 10,
         open: true,
-        pageId: 1
+        pageId: 1,
+        seniority: []
     },
     //监听滚动条
     onPageScroll: function ({scrollTop}) {
@@ -28,19 +29,28 @@ Page({
             if (this.data.open === true) {
                 this.data.open = false;
                 //获取商品列表
-                let res = Api(app.globalData.urlApi + 'get-goods-list?userId=' + app.globalData.userId + '&pageId=' + this.data.pageId + '&pageSize=' + this.data.num + '&key=' + app.globalData.key + '&tmall=1', 'get');
-                res.then((resolve, reject) => {
-                    if (resolve.code !== -1) {
-                        this.setData({
-                            list: this.data.list.concat(resolve.data.list)
-                        })
-                        console.log(this.data.list)
-                        this.data.open = true;
-                        this.data.pageId += 1;
-                    } else {
-                        console.log(reject)
-                    }
-                })
+                //判断key与userId
+                if (app.globalData.key && app.globalData.key !== '' && app.globalData.userId && app.globalData.userId !== '') {
+                    let res = Api(app.globalData.urlApi + 'get-goods-list?userId=' + app.globalData.userId + '&pageId=' + this.data.pageId + '&pageSize=' + this.data.num + '&key=' + app.globalData.key + '&tmall=1', 'get');
+                    res.then((resolve, reject) => {
+                        if (resolve.code !== -1) {
+                            this.setData({
+                                list: this.data.list.concat(resolve.data.list)
+                            })
+                            console.log(this.data.list)
+                            this.data.open = true;
+                            this.data.pageId += 1;
+                        } else {
+                            console.log(reject)
+                            wx.showToast({
+                                title: '加载失败',
+                                icon: 'none',
+                                duration: 1000,
+                                mask: true
+                            })
+                        }
+                    })
+                }
             }
 
         }
@@ -51,13 +61,47 @@ Page({
         });
     },
     onLoad(query) {
-        // console.log(app.globalData.secretKey);
+        //判断key
+        if (app.globalData.key && app.globalData.key !== '') {
+            funcs.get_ranking_list(this);
+        } else {
+            //调用app的keyCallback属性
+            app.keyCallback = key => {
+                //判断key
+                if (key !== '') {
+                    funcs.get_ranking_list(this);
+                }
+            }
+        }
+
+        //定义页面方法集合
+        let funcs = {
+            get_ranking_list(event) {
+                let res = Api(app.globalData.urlApi + 'get-ranking-list?userId=' + app.globalData.userId + '&key=' + app.globalData.key, 'get');
+                res.then((resolve, reject) => {
+                    if (resolve.code !== -1) {
+                        event.setData({
+                            seniority: resolve.data
+                        })
+                        console.log(event.data.seniority)
+                    } else {
+                        console.log(reject)
+                        wx.showToast({
+                            title: '加载失败',
+                            icon: 'none',
+                            duration: 1000,
+                            mask: true
+                        })
+                    }
+                })
+            }
+
+        }
 
     },
     favorable({currentTarget}) {
         wx.navigateTo({
             url: '/pages/details/index?id=' + currentTarget.dataset.id
         });
-        console.log();
     }
 })
