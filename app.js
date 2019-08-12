@@ -36,7 +36,6 @@ App({
                         success: res => {
                             // 可以将 res 发送给后台解码出 unionId
                             this.globalData.userInfo = res.userInfo
-
                             // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
                             // 所以此处加入 callback 以防止这种情况
                             if (this.userInfoReadyCallback) {
@@ -47,13 +46,26 @@ App({
                 }
             }
         });
+
         //接口授权
         let res = Api(this.data.urlTop + 'accredit?secretKey=' + this.data.secretKey + '&userId=' + this.globalData.userId, 'get');
         res.then((resolve, reject) => {
             if (resolve.code !== -1) {
                 this.globalData.key = resolve.data.key
+                // 由于 Api 是网络请求，可能会在 Page.onLoad 之后才返回
+                // 所以此处加入 callback 以防止这种情况
+                if (this.keyCallback) {
+                    this.keyCallback(resolve.data.key)
+                }
             } else {
                 console.log(reject)
+                wx.showToast({
+                    title: '加载失败',
+                    icon: 'none',
+                    duration: 1000,
+                    mask:true
+                })
+
             }
         })
     }
