@@ -20,7 +20,7 @@
         <view>近</view>
         <view>24</view>
         <view>小时，</view>
-        <view>2335</view>
+        <view>{{commodity.dailySales}}</view>
         <view>人已抢</view>
     </view>
 </view>
@@ -74,6 +74,6 @@
         <view class="coupon2">立即领券</view>
     </view>
     <view class="introduce title-box">
-        fdasfsdgsaggdsaaaaaaaaaaaaaaaaaaaaaaaaaaaa反反复复付付付付付付付付付付付付付付付付付付付付付付
+        {{commodity.desc}}
     </view>
 </view>
