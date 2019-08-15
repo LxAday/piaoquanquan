@@ -14,7 +14,7 @@ const formatNumber = n => {
     return n[1] ? n : '0' + n
 }
 
-const Api = (url, method, data = []) => {
+const Api = (url, method='get', data = []) => {
     return new Promise((resolve, reject) => {
         wx.request({
             url: url,
