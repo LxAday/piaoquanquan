@@ -1,4 +1,13 @@
-var filter = function (event,symbol) {
-    return event.split(symbol)
+var filter = function (event = '', symbol = '') {
+    return event.split(symbol);
 }
-module.exports.filter = filter
+var len = function (event = '', len = event.length + 1) {
+    return event.substring(0, len) + '...';
+
+};
+
+
+module.exports = {
+    filter: filter,
+    len: len
+}
