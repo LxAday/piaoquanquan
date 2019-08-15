@@ -1,4 +1,6 @@
 <!--顶部搜索-->
+<!--引入公共函数库-->
+<wxs module="m1" src="../../filter.wxs"></wxs>
 <view class="top">
     <view class="search-box">
         <view class="iconfont icon-sousuo sousuo-ico"></view>
@@ -12,16 +14,9 @@
     <view class="column">
         <scroll-view scroll-x="true"
                      style="height:40rpx;text-align:left;white-space: nowrap;">
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
-            <view>美食</view>
+            <block wx:for="{{hot}}" wx:key="">
+                <view>{{item}}</view>
+            </block>
         </scroll-view>
     </view>
     <view class="iconfont icon-ai-arrow-down ai-arrow-down"></view>
@@ -29,32 +24,21 @@
         <!--轮播图-->
 <view class="carousel">
     <swiper indicator-active-color="#FC3F78" indicator-dots="true" circular="true" autoplay="true">
-        <swiper-item>
-            <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01GrZZGu2JJhxkJo8Xq_!!2053469401.jpg"></image>
-        </swiper-item>
-        <swiper-item>
-            <image src="https://img.alicdn.com/imgextra/i3/2053469401/O1CN01LL445N2JJhxpsD0p6_!!2053469401.jpg"></image>
-        </swiper-item>
+        <block wx:for="{{imgs}}" wx:key="">
+            <swiper-item bindtap="favorable" data-id="{{item.id}}">
+                <image src="{{item.pic}}"></image>
+            </swiper-item>
+        </block>
     </swiper>
 </view>
         <!--分类-->
 <view class="classification">
-    <view>
-        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
-        <view>9.9包邮</view>
-    </view>
-    <view>
-        <image src="https://img.alicdn.com/imgextra/i2/2053469401/O1CN01yJcLA22JJhxsrHHRT_!!2053469401.png"></image>
-        <view>9.9包邮</view>
-    </view>
-    <view>
-        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
-        <view>9.9包邮</view>
-    </view>
-    <view>
-        <image src="https://img.alicdn.com/imgextra/i4/2053469401/O1CN01NTkyED2JJhxrW9lY8_!!2053469401.png"></image>
-        <view>9.9包邮</view>
-    </view>
+    <block wx:for="{{classify}}" wx:key="">
+        <view>
+            <image src="{{item.img_url}}"></image>
+            <view>{{item.title}}</view>
+        </view>
+    </block>
 </view>
         <!--推送-->
 <view class="push">
@@ -80,149 +64,32 @@
         </view>
     </view>
     <view class="draw-button">
-
         <scroll-view scroll-x="true"
                      style="height:380rpx;text-align:left;white-space: nowrap;">
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
+
+            <block wx:for="{{seniority}}" wx:for-item="item" wx:key="">
+                <view class="draw-button-box" bindtap="favorable" data-id="{{item.id}}">
+                    <view class="draw-button-img">
+                        <image src="{{item.pic}}"></image>
                     </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
+                    <view class="draw-button-ab">
+                        <view>{{item.couponReceiveNum}}人已领</view>
+                        <view class="draw-button-ab-last">{{item.couponPrice}}元券</view>
                     </view>
-                </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
+                    <view class="draw-button-title">{{m1.len(item.title,8)}}</view>
+                    <view class="draw-button-price">
+                        <view>
+                            <view>￥</view>
+                            <view>{{item.actualPrice}}</view>
+                        </view>
+                        <view>
+                            <view>￥</view>
+                            <view>{{item.originPrice}}</view>
+                        </view>
                     </view>
                 </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
-                    </view>
-                </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
-                    </view>
-                </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
-                    </view>
-                </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
-                    </view>
-                </view>
-            </view>
-            <view class="draw-button-box">
-                <view class="draw-button-img">
-                    <image src="https://img.alicdn.com/imgextra/i4/2202652417667/O1CN01C8upYd26VXBZLu5Wq_!!2202652417667.jpg_310x310.jpg_.webp"></image>
-                </view>
-                <view class="draw-button-ab">
-                    <view>3.8万人已领</view>
-                    <view class="draw-button-ab-last">100元券</view>
-                </view>
-                <view class="draw-button-title">大发aaaaaaaaaaaa发发sfdsadf地方撒</view>
-                <view class="draw-button-price">
-                    <view>
-                        <view>￥</view>
-                        <view>158</view>
-                    </view>
-                    <view>
-                        <view>￥</view>
-                        <view>165</view>
-                    </view>
-                </view>
-            </view>
+            </block>
+
         </scroll-view>
 
 
@@ -253,7 +120,7 @@
         <view class="describe">
             <view class="title">
                 <view class="iconfont icon-tianmaoT"></view>
-                <view>{{item.title}}</view>
+                <view>{{m1.len(item.title,36)}}</view>
             </view>
             <view class="price">
                 <view class="price1">

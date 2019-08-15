@@ -232,7 +232,7 @@
 .draw-button-box .draw-button-ab .draw-button-ab-last:before {
     position: absolute;
     content: '';
-    width: 1rpx;
+    width: 2rpx;
     height: 24rpx;
     background: #fff;
     left: -10rpx;
