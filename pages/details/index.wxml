@@ -67,7 +67,7 @@
             </view>
             <view class="coupon11 coupon111">
                 <view>使用期限:</view>
-                <view>{{m1.filter(commodity.couponStartTime,' ')[0]}}-{{m1.filter(commodity.couponEndTime,' ')[0]}}
+                <view>{{m1.filter(commodity.couponStartTime,' ')[0]}}至{{m1.filter(commodity.couponEndTime,' ')[0]}}
                 </view>
             </view>
         </view>
