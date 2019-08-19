@@ -1,2 +1,9 @@
 <!--pages/postage/postage.wxml-->
-<text>pages/postage/postage.wxml</text>
+<view class="top">
+    <view class="iconfont icon-ai-arrow-down" bingtap=""></view>
+    <view class="title">
+        <view class="iconfont icon-99"></view>
+        <view>包邮</view>
+    </view>
+    <view class="iconfont icon-diandiandianshu" bingtap=""></view>
+</view>

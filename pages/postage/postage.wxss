@@ -1,1 +1,36 @@
 /* pages/postage/postage.wxss */
+
+/*顶部*/
+.top {
+    width: 750rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: linear-gradient(to left, #FA4DBE 0, #FBAA58 100%);
+}
+
+.top > .icon-ai-arrow-down {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    transform: rotate(90deg);
+    margin-left: 10rpx;
+}
+
+.top .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top .title view:first-child {
+    font-size: 80rpx;
+}
+
+.top .icon-diandiandianshu {
+    font-size: 50rpx;
+    margin-right: 20rpx;
+}
