@@ -21,7 +21,7 @@
         "selectedIconPath": "/images/menus/主页s.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/postage/postage",
         "text": "9.9包邮",
         "iconPath": "/images/menus/9.9.png",
         "selectedIconPath": "/images/menus/9.9s.png"

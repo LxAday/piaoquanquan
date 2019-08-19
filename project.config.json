@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -62,6 +62,13 @@
 					"name": "商品详情",
 					"pathName": "pages/details/index",
 					"query": "id= 21560294",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "9.9",
+					"pathName": "pages/postage/postage",
+					"query": "",
 					"scene": null
 				}
 			]
