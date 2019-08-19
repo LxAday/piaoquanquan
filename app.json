@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/index"
+    "pages/details/details",
+    "pages/postage/postage"
   ],
   "window": {
     "backgroundColor": "#666",
