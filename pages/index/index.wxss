@@ -2,7 +2,7 @@
 .top {
     width: 750rpm;
     height: 90rpx;
-    background: red;
+    background: linear-gradient(to left, #FA4DBE 0, #FBAA58 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
