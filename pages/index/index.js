@@ -14,7 +14,8 @@ Page({
         seniority: [],
         imgs: [],
         hot: [],
-        classify: []
+        classify: [],
+        push: []
     },
     //监听滚动条
     onPageScroll: function ({scrollTop}) {
@@ -71,7 +72,11 @@ Page({
         } else {
             //判断key
             if (app.globalData.key && app.globalData.key !== '') {
-                funcs.get_ranking_list(this);
+                funcs.top_search(this, 'hot', 'recommended-column')
+                funcs.top_search(this, 'classify', 'classification-of-icon')
+                funcs.top_search(this, 'push', 'serve-ads')
+                funcs.get_ranking_list(this, 'imgs', 1, '', 5)
+                funcs.get_ranking_list(this, 'seniority', 3, '')
             } else {
                 //调用app的keyCallback属性
                 app.keyCallback = key => {
@@ -79,8 +84,10 @@ Page({
                     if (key !== '') {
                         funcs.top_search(this, 'hot', 'recommended-column')
                         funcs.top_search(this, 'classify', 'classification-of-icon')
+                        funcs.top_search(this, 'push', 'serve-ads')
                         funcs.get_ranking_list(this, 'imgs', 1, '', 5)
                         funcs.get_ranking_list(this, 'seniority', 3, '')
+
                     }
                 }
             }

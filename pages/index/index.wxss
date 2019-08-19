@@ -124,8 +124,6 @@
 .push {
     width: 750rpx;
     height: 700rpx;
-    background: url("https://img.alicdn.com/imgextra/i1/2053469401/O1CN01Mrwm8l2JJhxstUglC_!!2053469401.png");
-    background-size: 100% 100%;
 }
 
 .push .push-top {

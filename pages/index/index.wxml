@@ -41,15 +41,15 @@
     </block>
 </view>
         <!--推送-->
-<view class="push">
-    <navigator class="push-top" url=""></navigator>
+<view class="push" style="background: url('{{push.img_url}}') top center no-repeat;background-size: 100% 100%;">
+    <navigator class="push-top" url="{{push.url1}}"></navigator>
     <view class="push-body">
-        <navigator url=""></navigator>
-        <navigator url=""></navigator>
-        <navigator url=""></navigator>
-        <navigator url=""></navigator>
-        <navigator url=""></navigator>
-        <navigator url=""></navigator>
+        <navigator url="{{push.url2}}"></navigator>
+        <navigator url="{{push.url3}}"></navigator>
+        <navigator url="{{push.url4}}"></navigator>
+        <navigator url="{{push.url5}}"></navigator>
+        <navigator url="{{push.url6}}"></navigator>
+        <navigator url="{{push.url7}}"></navigator>
     </view>
 </view>
         <!--大家都在领-->
